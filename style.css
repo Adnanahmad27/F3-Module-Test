@@ -51,15 +51,15 @@ tr{
 }
 td{
     padding: 10px;
-    height: 70px;
+    max-height: 70px;
 }
 
-tr td:first-child {
-    display: flex;
-    justify-content: space-between;
-    padding: 5px;
-    gap: 2px;
-    align-items: center;
+td:first-child {
+    text-align: left;
+    
+}
+td:last-child{
+    text-align: end;
 }
 .positive{
     color : var(--positive-color);

@@ -23,7 +23,7 @@ function renderingTable(arr){
         let row = tbody.insertRow();
         let sign = data.price_change_percentage_24h <=0 ? 'negative':'positive';
         row.innerHTML = `
-        <td><img src="${data.image}" alt="..."> ${data.id}</td>
+        <td><img src="${data.image}" alt="..." width='22'>  ${data.id}</td>
         <td>${data.symbol}</td>
         <td>${data.current_price}</td>
         <td>${data.total_volume}</td>
@@ -37,7 +37,7 @@ sortMktBtn.addEventListener('click' , () =>{
     renderingTable(sortedArr);
 });
 sortPerBtn.addEventListener('click' , () =>{
-    const sortedArr = data.sort( (a,b) => a.price_change_percentage_24h -b.price_change_percentage_24h );
+    const sortedArr = data.sort((a,b) => a.price_change_percentage_24h -b.price_change_percentage_24h );
     renderingTable(sortedArr);
 });
 searchBar.addEventListener('keyup', ()=>{
